@@ -237,6 +237,225 @@ body {
   animation: twinkle 2s linear infinite;
 }
 
+#pyramid {
+  width: 0;
+  height: 0;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  bottom: -130px;
+  position: absolute;
+  left: 37%;
+  border-left: 200px solid orange;
+  transform: rotate(45deg);
+  animation-delay: 5s;
+  animation: pyramidShadeLeft 60s linear infinite;
+}
+
+#pyramid::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  bottom: -100px;
+  position: absolute;
+  left: -100px;
+  border-left: 200px solid orange;
+  transform: rotate(90deg);
+  animation-delay: 5s;
+  animation: pyramidShadeRight 60s linear infinite;
+}
+
+#flying-saucer {
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 60%;
+  height: 110px;
+  transform: rotate(180deg) scale(.65);
+  box-shadow: inset 0px 10px 0 0 #747874;
+  position: relative;
+  top: 80px;
+  left: -10%;
+  background: #C9CDD4;
+  background: radial-gradient(#FFFFFF, #C9CDD4, #738198, #333333);
+  animation: flySaucer 60s ease-in-out infinite;
+}
+
+#flying-saucer::after {
+  content: "";
+  position: absolute;
+  border: 2px solid #C4C4C9;
+  width: 150px;
+  border-radius: 50%;
+  height: 90px;
+  left: 24%;
+  top: 45%;
+  background: #B7C7B8;
+  background: radial-gradient(#B7C7B8, #50A851, blue);
+  box-shadow: inset 0px 10px 0 0 #747874;
+}
+
+#flying-saucer .light {
+  border-radius: 50%;
+  background: #E72C27;
+  position: absolute;
+}
+
+#flying-saucer .light.l1 {
+  height: 7px;
+  width: 7px;
+  top: 85px;
+  left: 230px;
+  animation: saucerLight .5s linear infinite;
+}
+
+#flying-saucer .light.l2 {
+  height: 8px;
+  width: 8px;
+  top: 74px;
+  left: 260px;
+  animation-delay: 1s;
+  animation: saucerLightReverse .5s linear infinite;
+}
+
+#flying-saucer .light.l3 {
+  height: 9px;
+  width: 9px;
+  top: 60px;
+  left: 280px;
+  animation: saucerLight .5s linear infinite;
+}
+
+#flying-saucer .light.l4 {
+  height: 9px;
+  width: 9px;
+  top: 43px;
+  left: 268px;
+  animation: saucerLightReverse .5s linear infinite;
+}
+
+#flying-saucer .light.l5 {
+  height: 10px;
+  width: 10px;
+  top: 30px;
+  left: 240px;
+  animation: saucerLight .5s linear infinite;
+}
+
+#flying-saucer .light.l6 {
+  height: 10px;
+  width: 10px;
+  top: 21px;
+  left: 206px;
+  animation: saucerLightReverse .5s linear infinite;
+}
+
+#flying-saucer .light.l7 {
+  height: 10px;
+  width: 10px;
+  top: 17px;
+  left: 164px;
+  animation: saucerLight .5s linear infinite;
+}
+
+#flying-saucer .light.l8 {
+  height: 10px;
+  width: 10px;
+  top: 17px;
+  left: 122px;
+  animation: saucerLightReverse .5s linear infinite;
+}
+
+#flying-saucer .light.l9 {
+  height: 10px;
+  width: 10px;
+  top: 23px;
+  left: 80px;
+  animation: saucerLight .5s linear infinite;
+}
+
+#flying-saucer .light.l10 {
+  height: 10px;
+  width: 10px;
+  top: 36px;
+  left: 40px;
+  animation: saucerLightReverse .5s linear infinite;
+}
+
+#flying-saucer .light.l11 {
+  height: 9px;
+  width: 9px;
+  top: 56px;
+  left: 10px;
+  animation: saucerLight .5s linear infinite;
+}
+
+#flying-saucer .light.l12 {
+  height: 8px;
+  width: 8px;
+  top: 72px;
+  left: 23px;
+  animation: saucerLightReverse .5s linear infinite;
+}
+
+#flying-saucer .light.l13 {
+  height: 7px;
+  width: 7px;
+  top: 85px;
+  left: 47px;
+  animation: saucerLight .5s linear infinite;
+}
+
+@keyframes saucerLight {
+  from {
+    background: #950400;
+  }
+  to {
+    background: #E72C27;
+  }
+}
+
+@keyframes saucerLightReverse {
+  from {
+    background: #E72C27;
+  }
+  to {
+    background: #950400;
+  }
+}
+
+@keyframes flySaucer {
+  0% {
+    margin-left: -10%;
+    transform: rotate(190deg) scale(.65);
+  }
+  1% {
+    transform: rotate(190deg) scale(.65);
+  }
+  4% {
+    transform: rotate(180deg) scale(.65);
+    margin-left: 50%;
+    top: 160px;
+  }
+  8% {
+    transform: rotate(170deg) scale(.65);
+    margin-left: 29%;
+  }
+  7% {
+    transform: rotate(180deg) scale(.65);
+    margin-left: 30%;
+  }
+  9% {
+    transform: rotate(190deg) scale(.65);
+    margin-left: 110%;
+    top: 50px;
+  }
+  100% {
+    transform: rotate(190deg) scale(.65);
+    margin-left: 110%;
+  }
+}
+
 @keyframes moveclouds {
   0% {
     margin-left: 105%;
@@ -349,12 +568,50 @@ body {
   }
   87% {
     background: #D5EFFC;
-
   }
   93% {
     background: #5C97C1;
   }
   100% {
     background: #2E5180;
+  }
+}
+
+@keyframes pyramidShadeLeft {
+  0% {
+    border-left: 200px solid #C68000;
+  }
+  16% {
+    border-left: 200px solid orange;
+  }
+  50% {
+    border-left: 200px solid orange;
+  }
+  62% {
+    border-left: 200px solid #C68000;
+  }
+  100% {
+    border-left: 200px solid #C68000;
+  }
+}
+
+@keyframes pyramidShadeRight {
+  0% {
+    border-left: 200px solid #C68000;
+  }
+  16% {
+    border-left: 200px solid #C68000;
+  }
+  50% {
+    border-left: 200px solid #C68000;
+  }
+  62% {
+    border-left: 200px solid orange;
+  }
+  90% {
+    border-left: 200px solid orange;
+  }
+  100% {
+    border-left: 200px solid #C68000;
   }
 }
