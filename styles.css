@@ -277,7 +277,6 @@ body {
   top: 80px;
   left: -10%;
   background: #C9CDD4;
-  background: radial-gradient(#FFFFFF, #C9CDD4, #738198, #333333);
   animation: flySaucer 60s ease-in-out infinite;
 }
 
@@ -290,7 +289,7 @@ body {
   height: 90px;
   left: 24%;
   top: 45%;
-  background: #B7C7B8;
+  background: #50A851;
   background: radial-gradient(#B7C7B8, #50A851, blue);
   box-shadow: inset 0px 10px 0 0 #747874;
 }
