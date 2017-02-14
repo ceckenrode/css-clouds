@@ -6,3 +6,4 @@ Demo Available [here](https://ceckenrode.github.io/css-clouds/)
 
 ![Day](css-clouds-day.png)
 ![Night](css-clouds-night.png)
+![Gif](cloud.gif)
